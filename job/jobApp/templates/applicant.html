@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="test/css">
+        table,th,td{
+            border-collapse: collapse;
+            border: 70px solid black;
+            border-spacing: 5px;
+            padding: 40px;
+        }
+        h1{
+            margin: 40px;
+            display: inline;
+            position:-webkit-sticky;
+            top:0;
+            background-color: green;
+            border: 2px solid #4caf50;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicants</title>
+</head>
+<body> 
+    <h1>Applicant information</h1>
+    <table border="3">
+        <tr>
+            <th>Applicant First Name</th>
+            <th>Applicant Last Name</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Merital Status</th>
+            <th>Phone Number</th>
+        </tr>
+            {% for appls in appls %}
+        <tr>
+            <td> {{ appls.fname }} </td>
+            <td> {{ appls.lname }} </td>
+            <td> {{ appls.address }} </td>
+            <td> {{ appls.gender }} </td>
+            <td> {{ appls.meritalstatus }} </td>
+            <td> {{ appls.phonenumber }} </td>
+        </tr>
+            {% endfor %}
+    </table>
+            
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+      form{
+        border: none;
+        background-color: white;
+        text-align: center;
+        font-size: 12px;
+
+      }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Form</title>
+</head>
+<body>
+    <div style="background-color: rgb(179, 255, 0);"><h1 style="font-size: 700%; text-align-last: center;"> APPLICATION FORM</h1></div>
+    <form action="" method="POST">{% csrf_token %}
+    First name: <input type="text" name="fname"><br><br>
+   
+    Last name:<input type="text" name="lname"><br><br>
+    
+    Address:<input type="text" name="address"><br><br>
+    
+    Gender:<br>
+    <input type="radio" name ="gender" value="Male"> Male<br>
+    
+    <input type ="radio" name="gender" value="Female"> Female<br>
+    Merital status <br>
+    <input type="radio" name="meritalstatus" value="Single">Single<br>
+    <input type="radio" name="meritalstatus" value ="Married">Married<br>
+    Phone number <input type="number" name="phonenumber"><br><br>
+    
+    <input type="submit" value="Submit">
+    <marquee behavior="" direction="right" style="color: rgb(179, 255, 0); font-size: 25px;">Welcome in organization Welcome in organization Welcome in organization</marquee>
+   </form> 
+</body>
+</html>
